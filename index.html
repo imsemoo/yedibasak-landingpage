@@ -1,56 +1,83 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TakTek Dashboard keeps donations transparent and audit-ready while empowering NGOs with real-time fundraising intelligence.">
+  <title>Yedibasak — Stewardship, care, and community</title>
+  <meta name="description" content="Yedibasak is an English-speaking NGO dedicated to transparent relief, education, and community-building programs across Türkiye and beyond.">
   <meta name="theme-color" content="#0BB2C1">
+  <meta property="og:title" content="Yedibasak — Stewardship for resilient communities">
+  <meta property="og:description" content="Transparent giving, meaningful programs, and accountable impact reporting from the Yedibasak foundation.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Yedibasak">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yedibasak — NGO landing page">
+  <meta name="twitter:description" content="Supporting vulnerable communities with dignity, transparency, and care.">
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Yedibasak">
+  <link rel="canonical" href="https://example.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.gstatic.com/s/jost/v20/92zPtBhPNqw79Ij1E865zBUv7myjJQVG.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="https://fonts.gstatic.com/s/jost/v20/92zPtBhPNqw79Ij1E865zBUv7myRJQVG.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="https://fonts.gstatic.com/s/jost/v20/92zPtBhPNqw79Ij1E865zBUv7mx9IgVG.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="https://fonts.gstatic.com/s/jost/v20/92zPtBhPNqw79Ij1E865zBUv7mxEIgVG.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>TakTek | Charity Donations Dashboard</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Yedibasak",
+    "url": "https://yedibasak.org.tr/en",
+    "logo": "https://example.com/assets/img/logo.png",
+    "description": "Yedibasak is a Turkish NGO committed to transparent, community-led programs in relief, education, and sustainable development.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Istanbul",
+      "addressCountry": "TR"
+    }
+  }
+  </script>
 </head>
-<body class="page">
+<body class="site">
   <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#">
-        <img src="assets/img/logo.svg" alt="Platform Logo" width="40" height="40">
-        <div>
-          <span class="brand-name">TakTek Giving</span>
-          <small>Donation Intelligence</small>
-        </div>
+        <img src="assets/img/logo.png" alt="Yedibasak" width="48" height="48">
       </a>
       <nav class="primary-nav" aria-label="Primary">
-        <a href="#features" data-scroll>Features</a>
-        <a href="#solutions" data-scroll>Solutions</a>
-        <a href="#security" data-scroll>Security</a>
-        <a href="#pricing" data-scroll>Pricing</a>
-        <a href="#faq" data-scroll>FAQ</a>
+        <a href="#about" data-scroll="#about">About</a>
+        <a href="#programs" data-scroll="#programs">Programs</a>
+        <a href="#impact" data-scroll="#impact">Impact</a>
+        <a href="#news" data-scroll="#news">News</a>
+        <a href="#final-cta" data-scroll="#final-cta">Get Involved</a>
+        <a href="#contact" data-scroll="#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="btn btn-primary" data-scroll="#hero">Request Demo</button>
+        <a class="btn btn-primary" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
+        <a class="btn btn-outline" href="#final-cta" data-scroll="#final-cta">Volunteer</a>
       </div>
       <button class="mobile-nav-toggle" aria-controls="mobile-menu" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="hamburger"></span>
+        <span class="sr-only">Open menu</span>
+        <span class="hamburger" aria-hidden="true"></span>
       </button>
     </div>
-    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu-inner">
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="mobile-menu-panel">
+        <button class="mobile-menu-close" aria-label="Close navigation">
+          <span></span>
+        </button>
         <nav aria-label="Mobile primary">
-          <a href="#features" data-scroll>Features</a>
-          <a href="#solutions" data-scroll>Solutions</a>
-          <a href="#security" data-scroll>Security</a>
-          <a href="#pricing" data-scroll>Pricing</a>
-          <a href="#faq" data-scroll>FAQ</a>
+          <a href="#about" data-scroll="#about">About</a>
+          <a href="#programs" data-scroll="#programs">Programs</a>
+          <a href="#impact" data-scroll="#impact">Impact</a>
+          <a href="#news" data-scroll="#news">News</a>
+          <a href="#final-cta" data-scroll="#final-cta">Get Involved</a>
+          <a href="#contact" data-scroll="#contact">Contact</a>
         </nav>
-        <button class="btn btn-primary" data-scroll="#hero">Request Demo</button>
+        <div class="mobile-menu-cta">
+          <a class="btn btn-primary" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
+          <a class="btn btn-outline" href="#final-cta" data-scroll="#final-cta">Volunteer</a>
+        </div>
       </div>
     </div>
   </header>
@@ -59,301 +86,244 @@
     <section id="hero" class="hero-section reveal">
       <div class="container hero-grid">
         <div class="hero-content">
-          <p class="eyebrow">Modern charity leadership</p>
-          <h1>See every donation, approval, and payout in one transparent dashboard.</h1>
-          <p class="lead">TakTek Giving elevates donations operations for NGOs, foundations, and community initiatives with audit-ready trails, role-based access, and exportable outcomes.</p>
+          <p class="eyebrow">NGO • Community trust</p>
+          <h1>Yedibasak nurtures communities with care, transparency, and hope.</h1>
+          <p class="lead">We coordinate relief, education, and sustainability programs in Türkiye and neighboring regions while keeping every contribution accountable.</p>
           <div class="hero-ctas">
-            <button class="btn btn-primary">Request Demo</button>
-            <button class="btn btn-outline" data-scroll="#features">See Features</button>
-            <button class="btn btn-text">Start a campaign</button>
+            <a class="btn btn-primary" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
+            <a class="btn btn-outline" href="#programs" data-scroll="#programs">Explore programs</a>
           </div>
-          <p class="hero-meta">Book a demo &bull; Request access in minutes &bull; Export PDF/CSV reports with one click</p>
-          <div class="trust-row">
-            <p>Trusted by NGOs / Foundations / Community Initiatives</p>
-            <div class="trust-logos">
-              <span class="trust-logo" aria-hidden="true">Foundation</span>
-              <span class="trust-logo" aria-hidden="true">Relief</span>
-              <span class="trust-logo" aria-hidden="true">Harvest</span>
-              <span class="trust-logo" aria-hidden="true">Unity</span>
-            </div>
-          </div>
+          <p class="hero-meta">Transparency reports • Bilingual field teams • Community-led partnerships</p>
         </div>
         <div class="hero-visual" aria-hidden="true">
-          <div class="hero-panel">
-            <div class="panel-header">
-              <span>Donations overview</span>
-              <span class="badge">Live</span>
+          <div class="hero-illustration">
+            <span class="circle"></span>
+            <span class="circle secondary"></span>
+            <span class="bar"></span>
+            <span class="bar secondary"></span>
+          </div>
+          <div class="hero-card">
+            <p>Field team snapshot</p>
+            <strong>12 responders</strong>
+            <p class="muted">Education, relief, and health coordinators across three regions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section reveal">
+      <div class="container stats-grid">
+        <article>
+          <strong>14,200+</strong>
+          <p>People supported through livelihood and education programs.</p>
+        </article>
+        <article>
+          <strong>32</strong>
+          <p>Active programs delivering relief, health, and learning.</p>
+        </article>
+        <article>
+          <strong>560</strong>
+          <p>Dedicated volunteers and partner leaders.</p>
+        </article>
+        <article>
+          <strong>90</strong>
+          <p>Communities reached with dignified aid and planning.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about-section reveal">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">About Yedibasak</p>
+          <h2>Anchored in trust, rooted in community.</h2>
+        </div>
+        <div class="about-content">
+          <p>Since our founding, Yedibasak has paired humanitarian relief with education, health, and community development. Local partners and donors work together so every program is grounded in respect, accountability, and sustainability.</p>
+          <a class="btn btn-link" href="#">Read more about our work</a>
+        </div>
+        <div class="value-grid">
+          <article>
+            <h3>Transparency</h3>
+            <p>Donations are tracked, audited, and shared monthly with our supporters and community councils.</p>
+          </article>
+          <article>
+            <h3>Sustainability</h3>
+            <p>Programs emphasize local leadership, environmentally sensitive facilities, and long-term planning.</p>
+          </article>
+          <article>
+            <h3>Community</h3>
+            <p>Partners inform our initiatives, ensuring services answer real needs with dignity.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="programs" class="programs-section reveal">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Programs / Areas of work</p>
+          <h2>Carefully curated paths to community resilience.</h2>
+        </div>
+        <div class="program-grid">
+          <article>
+            <i class="fa-solid fa-hand-holding-medical" aria-hidden="true"></i>
+            <h3>Emergency Relief</h3>
+            <p>Rapid response teams provide shelter, clean water, and psychological first aid.</p>
+            <a class="btn btn-link" href="#">Learn more</a>
+          </article>
+          <article>
+            <i class="fa-solid fa-school" aria-hidden="true"></i>
+            <h3>Education Support</h3>
+            <p>Safe-learning spaces, after-school mentoring, and multilingual materials for children.</p>
+            <a class="btn btn-link" href="#">Learn more</a>
+          </article>
+          <article>
+            <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+          <h3>Food &amp; Essentials</h3>
+            <p>Monthly provisions, hygiene kits, and logistics designed with local partners.</p>
+            <a class="btn btn-link" href="#">Learn more</a>
+          </article>
+          <article>
+            <i class="fa-solid fa-venus" aria-hidden="true"></i>
+          <h3>Women &amp; Family Care</h3>
+            <p>Maternal health, counseling, and safe spaces for women and caregivers.</p>
+            <a class="btn btn-link" href="#">Learn more</a>
+          </article>
+          <article>
+            <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
+            <h3>Health Initiatives</h3>
+            <p>Mobile clinics, mental health support, and preventive care outreach.</p>
+            <a class="btn btn-link" href="#">Learn more</a>
+          </article>
+          <article>
+            <i class="fa-solid fa-sparkles" aria-hidden="true"></i>
+            <h3>Community Development</h3>
+            <p>Infrastructure grants, cooperative projects, and local leadership training.</p>
+            <a class="btn btn-link" href="#">Learn more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" class="impact-section reveal">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Impact &amp; Transparency</p>
+          <h2>Every donation has a clear path to the field.</h2>
+        </div>
+        <div class="impact-grid">
+          <div class="impact-story">
+            <p>We pair donor intent with community priorities through a documented process.</p>
+            <ol>
+              <li>Assessment by field directors and community committees.</li>
+              <li>Program design with measurable outcomes and budget transparency.</li>
+              <li>Implementation, monitoring, and storytelling shared in monthly reports.</li>
+            </ol>
+          </div>
+          <div class="transparency-block">
+            <p class="muted">Transparency</p>
+            <ul>
+              <li>Quarterly reports shared online and by request.</li>
+              <li>Documented procurement and volunteer rosters.</li>
+              <li>Responsible spending guided by local oversight groups.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured-campaigns" class="campaigns-section reveal">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Featured campaigns</p>
+          <h2>Support initiatives that are ready to scale.</h2>
+        </div>
+        <div class="campaign-grid">
+          <article>
+            <div class="campaign-header">
+              <h3>Schoolkits for Children</h3>
+              <span>Education Support</span>
             </div>
-            <div class="panel-chart">
-              <span class="chart-line"></span>
-              <span class="chart-line"></span>
-              <span class="chart-line"></span>
-            </div>
-            <div class="panel-stats">
-              <div>
-                <p>Raised this month</p>
-                <strong>$1.29M</strong>
+            <p>Delivering supplies to 400 children in rural districts.</p>
+            <div class="campaign-progress" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+              <span>65% funded</span>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 65%;"></div>
               </div>
-              <div>
-                <p>Open approvals</p>
-                <strong>12</strong>
+            </div>
+            <div class="campaign-actions">
+              <a class="btn btn-primary" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
+              <a class="btn btn-link" href="#">Share</a>
+            </div>
+          </article>
+          <article>
+            <div class="campaign-header">
+              <h3>Community Health Units</h3>
+              <span>Health Initiatives</span>
+            </div>
+            <p>Mobile teams supporting maternal and mental health clinics.</p>
+            <div class="campaign-progress" role="progressbar" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100">
+              <span>48% funded</span>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 48%;"></div>
               </div>
             </div>
-          </div>
-          <div class="hero-panel secondary">
-            <div class="panel-row">
-              <p>Donor retention</p>
-              <strong>92%</strong>
+            <div class="campaign-actions">
+              <a class="btn btn-primary" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
+              <a class="btn btn-link" href="#">Share</a>
             </div>
-            <div class="panel-row">
-              <p>Avg. gift size</p>
-              <strong>$248</strong>
+          </article>
+          <article>
+            <div class="campaign-header">
+              <h3>Women-led Microgrants</h3>
+              <span>Community Development</span>
             </div>
-            <div class="panel-row">
-              <p>Next payout</p>
-              <strong>Mar 12, 2026</strong>
+            <p>Seed funding for cooperative enterprises managed by local women.</p>
+            <div class="campaign-progress" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+              <span>72% funded</span>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 72%;"></div>
+              </div>
             </div>
-          </div>
-          <div class="hero-panel mini">
-            <p>Export &bull; PDF &bull; CSV</p>
-            <p class="opacity">Audit trail ready, permissions baked in.</p>
-          </div>
+            <div class="campaign-actions">
+              <a class="btn btn-primary" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
+              <a class="btn btn-link" href="#">Share</a>
+            </div>
+          </article>
+        </div>
+        <div class="section-link">
+          <a class="btn btn-link" href="#">View all campaigns</a>
         </div>
       </div>
     </section>
 
-    <section id="solutions" class="problem-solution reveal">
+    <section id="news" class="news-section reveal">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Problem &rarr; Solution</p>
-          <h2>From fragmented workflows to transparent oversight</h2>
-          <p>Every step is paired with a solution so teams can trust the story behind every donation.</p>
+          <p class="eyebrow">News &amp; updates</p>
+          <h2>Stories from the field.</h2>
         </div>
-        <div class="ps-grid">
-          <article class="ps-card">
-            <p class="label">Problem</p>
-            <h3>Manual tracking slows approvals</h3>
-            <p>Spreadsheets and inbox threads delay every mission-critical payout.</p>
+        <div class="news-grid">
+          <article>
+            <p class="news-date">Feb 14, 2026</p>
+            <h3>New community kitchens open in Gaziantep</h3>
+            <p>Local chefs and volunteers are collaborating to prepare nourishment with dignity.</p>
           </article>
-          <article class="ps-card solution-card">
-            <p class="label">Solution</p>
-            <h3>Centralized dashboard</h3>
-            <p>Bring gifts, grants, and requests into one orchestration layer with programmable approvals.</p>
+          <article>
+            <p class="news-date">Jan 28, 2026</p>
+            <h3>Education mentors graduate their first cohort</h3>
+            <p>Thirty mentors completed training and now support girls in bilingual literacy programs.</p>
           </article>
-        </div>
-        <div class="ps-grid">
-          <article class="ps-card">
-            <p class="label">Problem</p>
-            <h3>Payments arrive in fragments</h3>
-            <p>Multiple processors and currencies create reconciliation headaches.</p>
-          </article>
-          <article class="ps-card solution-card">
-            <p class="label">Solution</p>
-            <h3>Integrated payout flows</h3>
-            <p>Approve and reconcile in-app while the ledger syncs across PDF and CSV exports.</p>
+          <article>
+            <p class="news-date">Jan 10, 2026</p>
+            <h3>Transparency reports reach every donor</h3>
+            <p>Monthly dashboards now translate into English and Arabic to widen accountability.</p>
           </article>
         </div>
-        <div class="ps-grid">
-          <article class="ps-card">
-            <p class="label">Problem</p>
-            <h3>Lack of transparency erodes trust</h3>
-            <p>Donors, boards, and auditors ask for clarity that is hard to deliver.</p>
-          </article>
-          <article class="ps-card solution-card">
-            <p class="label">Solution</p>
-            <h3>Audit trail + reporting</h3>
-            <p>Every action is timestamped, exportable, and tied to role-based access controls.</p>
-          </article>
+        <div class="section-link">
+          <a class="btn btn-link" href="#">View all news</a>
         </div>
-      </div>
-    </section>
-
-    <section id="features" class="features-section reveal">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Features</p>
-          <h2>Built for stewardship teams and finance partners</h2>
-          <p>Clear oversight, actionable intelligence, and accountability for donors and staff.</p>
-        </div>
-        <div class="features-grid">
-          <article class="feature-card">
-            <span class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="presentation"><path d="M3 14h18v2H3z"></path><path d="M3 7h12v2H3z"></path><path d="M3 18h8v2H3z"></path></svg>
-            </span>
-            <h3>Campaign management</h3>
-            <p>Launch giving cycles, assign budgets, and deliver communication milestones with a shared roadmap.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="presentation"><path d="M5 11h6v6H5z"></path><path d="M13 5h6v12h-6z"></path><path d="M5 5h6v4H5z"></path></svg>
-            </span>
-            <h3>Donations tracking</h3>
-            <p>See live gifts across channels, reconcile processors, and tag gifts with impact pools.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="presentation"><circle cx="12" cy="8" r="3"></circle><path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path></svg>
-            </span>
-            <h3>Donor profiles</h3>
-            <p>Unified histories, preferences, and communications so stewardship stays personal.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="presentation"><path d="M3 13h18v2H3z"></path><path d="M6 6h12v4H6z"></path><path d="M6 16h12v4H6z"></path></svg>
-            </span>
-            <h3>Finance &amp; payouts</h3>
-            <p>Streamline approvals, automate wire and ACH exports, and keep reconciliations in sync.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="presentation"><rect x="5" y="7" width="14" height="10" rx="2" ry="2"></rect><path d="M3 10h18"></path><path d="M3 14h18"></path></svg>
-            </span>
-            <h3>Agreements &amp; invoices</h3>
-            <p>Create digital agreements, attach POs, and archive signed PDFs with one click.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="presentation"><path d="M4 3h16v4H4z"></path><path d="M4 11h10v4H4z"></path><path d="M4 19h7v2H4z"></path></svg></span>
-            <h3>Roles &amp; permissions</h3>
-            <p>Model stewardship, finance, and volunteer rights with granular control and approval tiers.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="workflow-section reveal">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">How it works</p>
-          <h2>Three steps to a confident giving cycle</h2>
-        </div>
-        <div class="workflow-grid">
-          <article class="workflow-card">
-            <span class="step">01</span>
-            <h3>Create campaign</h3>
-            <p>Define goals, audiences, and approval paths so every request flows through the right review board.</p>
-          </article>
-          <article class="workflow-card">
-            <span class="step">02</span>
-            <h3>Collect donations</h3>
-            <p>Aggregate payments, automate thank-you receipts, and keep the donor journey transparent.</p>
-          </article>
-          <article class="workflow-card">
-            <span class="step">03</span>
-            <h3>Report &amp; export</h3>
-            <p>Publish real-time dashboards and export PDF/CSV bundles with audit-trail context for auditors and partners.</p>
-          </article>
-        </div>
-        <div class="workflow-cta">
-          <p>Need a guided rollout or white-glove concierge? <button class="btn btn-text" data-scroll="#pricing">Request access</button></p>
-        </div>
-      </div>
-    </section>
-
-    <section id="security" class="security-section reveal">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Security &amp; Compliance</p>
-          <h2>Every action is traceable, auditable, and role-aware</h2>
-          <p>We do not promise certifications, only the controls and transparency your board expects.</p>
-        </div>
-        <ul class="security-list">
-          <li>
-            <span class="security-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6z"></path></svg>
-            </span>
-            <div>
-              <h3>Transparent audit trail</h3>
-              <p>Every gift, approval, and payout is stamped with who, when, and why.</p>
-            </div>
-          </li>
-          <li>
-            <span class="security-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v4"></path><path d="M12 18v4"></path><path d="M2 12h4"></path><path d="M18 12h4"></path></svg>
-            </span>
-            <div>
-              <h3>Role-based access</h3>
-              <p>Define finance, stewardship, and volunteer tiers with policy-based approvals.</p>
-            </div>
-          </li>
-          <li>
-            <span class="security-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 8h16v12H4z"></path><path d="M7 12h3v5H7z"></path><path d="M14 12h3v5h-3z"></path></svg>
-            </span>
-            <div>
-              <h3>Data protection</h3>
-              <p>Encrypted at rest and in transit, with regular backups and monitoring.</p>
-            </div>
-          </li>
-          <li>
-            <span class="security-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M3 10h18" stroke-width="2" stroke-linecap="round"></path><path d="M3 14h14" stroke-width="2" stroke-linecap="round"></path></svg>
-            </span>
-            <div>
-              <h3>Transparency first</h3>
-              <p>Share live dashboards, exportable reports, and narratives with donors and trustees.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="pricing" class="pricing-section reveal">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Pricing</p>
-          <h2>Plans that align with every charity size</h2>
-          <p>Transparent pricing, inclusive support, and the freedom to upgrade when you scale.</p>
-        </div>
-        <div class="pricing-grid">
-          <article class="plan-card">
-            <div class="plan-header">
-              <p>Starter</p>
-              <strong>$499 / mo</strong>
-            </div>
-            <ul>
-              <li>Campaign blueprints</li>
-              <li>Donation tracking dashboard</li>
-              <li>PDF exports</li>
-              <li>Basic approvals</li>
-              <li>Community support</li>
-              <li>Role-based access</li>
-            </ul>
-            <button class="btn btn-outline">Select Starter</button>
-          </article>
-          <article class="plan-card plan-recommended">
-            <div class="plan-label">Most requested</div>
-            <div class="plan-header">
-              <p>Growth</p>
-              <strong>$999 / mo</strong>
-            </div>
-            <ul>
-              <li>Everything in Starter</li>
-              <li>Approvals &amp; audit trail</li>
-              <li>Multi-currency payouts</li>
-              <li>CSV + PDF exports</li>
-              <li>Priority support</li>
-              <li>3 seats included</li>
-            </ul>
-            <button class="btn btn-primary">Start with Growth</button>
-          </article>
-          <article class="plan-card">
-            <div class="plan-header">
-              <p>Enterprise</p>
-              <strong>Custom</strong>
-            </div>
-            <ul>
-              <li>Dedicated success lead</li>
-              <li>Advanced integrations</li>
-              <li>Custom SLAs</li>
-              <li>Enhanced security reviews</li>
-              <li>Unlimited exports</li>
-              <li>On-site training</li>
-            </ul>
-            <button class="btn btn-outline">Talk to sales</button>
-          </article>
-        </div>
-        <p class="pricing-note">Contact us for custom needs and multi-region programs.</p>
       </div>
     </section>
 
@@ -361,23 +331,23 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Testimonials</p>
-          <h2>Trusted by leaders across the giving sector</h2>
+          <h2>Partners in long-term care.</h2>
         </div>
         <div class="testimonials-grid">
-          <article class="testimonial-card">
-            <p>"TakTek keeps our board informed with real-time dashboards and transparent exports every quarter."</p>
-            <strong>Miranda Alvarez</strong>
-            <small>COO, Horizon Relief</small>
+          <article>
+            <p>“Yedibasak grounds every project in local oversight so donors and families trust that resources reach the field.”</p>
+            <strong>Anaïs Legrand</strong>
+            <small>Volunteer coordinator, Marseille Fellowship</small>
           </article>
-          <article class="testimonial-card">
-            <p>"We consolidated all donations, approvals, and compliance histories into one accessible workspace."</p>
-            <strong>Samuel Kim</strong>
-            <small>Finance Director, Beacon Education Fund</small>
+          <article>
+            <p>“Their reports make it clear exactly how relief and education dollars were invested in each village cluster.”</p>
+            <strong>Selim Korkmaz</strong>
+            <small>Community liaison, Southeastern Initiative</small>
           </article>
-          <article class="testimonial-card">
-            <p>"Their role-based controls and audit logs let us invite partners without handing over full access."</p>
-            <strong>Lena Ferreira</strong>
-            <small>Programs Lead, CityHarvest Collective</small>
+          <article>
+            <p>“We know our gifts are matched with locally led plans and responsible partners.”</p>
+            <strong>Emilia Park</strong>
+            <small>Donor, Global Compassion Collective</small>
           </article>
         </div>
       </div>
@@ -387,109 +357,103 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">FAQ</p>
-          <h2>Questions we hear during onboarding</h2>
+          <h2>Questions we hear from supporters.</h2>
         </div>
-        <div class="accordion" id="faq-list">
+        <div class="accordion">
           <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-1" id="faq-1-label">How long does onboarding take for a new NGO?</button>
-            <div class="accordion-panel" id="faq-1" aria-labelledby="faq-1-label">
-              <p>We typically complete onboarding in 2-3 weeks, pairing you with a success manager who maps the campaign, finance, and compliance workflows.</p>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-1" id="faq-1-label">What payment methods does Yedibasak accept?</button>
+            <div class="accordion-panel" id="faq-1" aria-labelledby="faq-1-label" hidden>
+              <p>We accept credit card, bank transfer, and in-person donations. Recurring gifts are managed through a secure partner platform.</p>
             </div>
           </div>
           <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-2" id="faq-2-label">Do you support multiple payment processors?</button>
-            <div class="accordion-panel" id="faq-2" aria-labelledby="faq-2-label">
-              <p>Yes, connect ACH, credit, and international processors. Donations roll up into a unified ledger so the dashboard reflects every channel.</p>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-2" id="faq-2-label">Will I receive a receipt for my donation?</button>
+            <div class="accordion-panel" id="faq-2" aria-labelledby="faq-2-label" hidden>
+              <p>Yes, every donation is followed by a digital receipt that includes your gift details and tax information where applicable.</p>
             </div>
           </div>
           <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-3" id="faq-3-label">Can we export reports for auditors?</button>
-            <div class="accordion-panel" id="faq-3" aria-labelledby="faq-3-label">
-              <p>Generate branded PDF and CSV exports with audit trail comments, approvals, and contributor metadata for board reviews.</p>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-3" id="faq-3-label">How can I volunteer with Yedibasak?</button>
+            <div class="accordion-panel" id="faq-3" aria-labelledby="faq-3-label" hidden>
+              <p>Submit an interest form on our website and we will connect you with near-term field or remote opportunities.</p>
             </div>
           </div>
           <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-4" id="faq-4-label">How do permissions work?</button>
-            <div class="accordion-panel" id="faq-4" aria-labelledby="faq-4-label">
-              <p>Define project roles, approve flows, and limit access to sensitive data. Every action carries the actor's name and timestamp.</p>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-4" id="faq-4-label">How do you choose programs?</button>
+            <div class="accordion-panel" id="faq-4" aria-labelledby="faq-4-label" hidden>
+              <p>Program selection involves community councils, needs assessments, and feasibility studies so every initiative is rooted in local leadership.</p>
             </div>
           </div>
           <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-5" id="faq-5-label">What integrations are available?</button>
-            <div class="accordion-panel" id="faq-5" aria-labelledby="faq-5-label">
-              <p>Out-of-the-box connectors include Salesforce, QuickBooks, Stripe, and Plaid. Custom APIs are also supported for ERP syncs.</p>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-5" id="faq-5-label">How do you ensure transparency?</button>
+            <div class="accordion-panel" id="faq-5" aria-labelledby="faq-5-label" hidden>
+              <p>Reports include budgets, procurement notes, and verification from partner committees, and we share updates each month.</p>
             </div>
           </div>
           <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-6" id="faq-6-label">Is support available 24/7?</button>
-            <div class="accordion-panel" id="faq-6" aria-labelledby="faq-6-label">
-              <p>We offer priority support for Growth and Enterprise plans with dedicated engineers and weekly operational reviews.</p>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-6" id="faq-6-label">How can I contact the team?</button>
+            <div class="accordion-panel" id="faq-6" aria-labelledby="faq-6-label" hidden>
+              <p>Email <a href="mailto:hello@yedibasak.org">hello@yedibasak.org</a> or call +90 212 555 0101 to speak with our field or fundraising teams.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="final-cta reveal">
+    <section id="final-cta" class="final-cta reveal">
       <div class="container final-cta-inner">
         <div>
-          <p class="eyebrow">Ready to move faster?</p>
-          <h2>Book a demo, request access, and start your next campaign with clarity.</h2>
-          <p>We pair your finance and programs teams with experts who keep every donation transparent and accountable.</p>
+          <p class="eyebrow">Final call</p>
+          <h2>Make an impact today.</h2>
+          <p>Choose a campaign, volunteer alongside local teams, or stay updated with our reporting.</p>
         </div>
         <div class="final-cta-actions">
-          <button class="btn btn-primary">Book a demo</button>
-          <button class="btn btn-outline" data-scroll="#pricing">Request access</button>
+          <a class="btn btn-primary" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
+          <a class="btn btn-outline" href="#contact" data-scroll="#contact">Get involved</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" id="contact">
     <div class="container footer-grid">
       <div>
-        <h3>Product</h3>
-        <a href="#features" data-scroll>Features</a>
-        <a href="#workflow" data-scroll>How it works</a>
-        <a href="#security" data-scroll>Security</a>
+        <h3>About</h3>
+        <p>Yedibasak — transparent stewardship for communities in Türkiye and beyond.</p>
       </div>
       <div>
-        <h3>Company</h3>
-        <a href="#pricing" data-scroll>Pricing</a>
-        <a href="#faq" data-scroll>FAQ</a>
-        <a href="#">About</a>
+        <h3>Programs</h3>
+        <a href="#programs" data-scroll="#programs">Explore work</a>
+        <a href="#featured-campaigns" data-scroll="#featured-campaigns">Featured campaigns</a>
+        <a href="#impact" data-scroll="#impact">Impact reports</a>
       </div>
       <div>
-        <h3>Resources</h3>
-        <a href="#">Blog</a>
-        <a href="#">Guides</a>
-        <a href="#">Support</a>
+        <h3>Get involved</h3>
+        <a href="#final-cta" data-scroll="#final-cta">Volunteer</a>
+        <a href="#news" data-scroll="#news">News &amp; events</a>
+        <a href="#faq" data-scroll="#faq">FAQ</a>
       </div>
       <div>
         <h3>Contact</h3>
-        <p>hello@taktekgiving.org</p>
-        <p>+1 (555) 123-7890</p>
+        <a href="mailto:hello@yedibasak.org">hello@yedibasak.org</a>
+        <a href="tel:+902125550101">+90 212 555 0101</a>
         <div class="social-links">
-          <a href="#" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" role="presentation"><path d="M6 9H3v12h3zm-1.5-3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm13 3h-2.7v1.7h-.1c-.3-.6-1.1-1.3-2.3-1.3-2.4 0-2.8 1.6-2.8 3.7V21h3v-5.4c0-1.3.2-2.6 1.5-2.6 1.3 0 1.3 1.2 1.3 2.7V21h3z"></path></svg>
-          </a>
-          <a href="#" aria-label="Twitter">
-            <svg viewBox="0 0 24 24"><path d="M22 5.7a8.5 8.5 0 0 1-2.5.7 4.4 4.4 0 0 0 2-2.4 8.8 8.8 0 0 1-2.8 1.1 4.4 4.4 0 0 0-7.4 2.2c0 .3 0 .7.1 1A12.5 12.5 0 0 1 3 4.8a4.3 4.3 0 0 0-.6 2.2 4.4 4.4 0 0 0 2 3.6 4.5 4.5 0 0 1-2-.5v.1a4.4 4.4 0 0 0 3.5 4.3 4.3 4.3 0 0 1-2 .1 4.4 4.4 0 0 0 4.1 3 8.8 8.8 0 0 1-5.4 1.8 8.5 8.5 0 0 1-1-.1A12.4 12.4 0 0 0 8 20a12.5 12.5 0 0 0 12.4-12.4v-.6A8.9 8.9 0 0 0 22 5.7z"></path></svg>
-          </a>
-          <a href="#" aria-label="YouTube">
-            <svg viewBox="0 0 24 24"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.7-.8-2.1-.9C16.1 5 12 5 12 5h-.1s-4.1 0-6.9.1c-.4 0-1.3 0-2.1.9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.6c0 1.6.1 3.2.1 3.2s.2 1.4.8 2c.8.8 1.9.8 2.4.9 1.8.1 7 .1 7 .1s4 0 6.8-.1c.4 0 1.3 0 2.1-.9.6-.6.8-2 .8-2s.1-1.6.1-3.2v-1.6c0-1.6 0-3.2-.1-3.2z"></path><path d="M10 14.6l4.6-2.6L10 9.4z"></path></svg>
-          </a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 TakTek Giving. All rights reserved.</p>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
+      <p>Yedibasak — All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
     </div>
   </footer>
 
-  <button id="back-to-top" aria-label="Back to top">Top</button>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">Top</button>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
