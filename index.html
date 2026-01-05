@@ -1,25 +1,31 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Yedibasak — Stewardship, care, and community</title>
-  <meta name="description" content="Yedibasak is an English-speaking NGO dedicated to transparent relief, education, and community-building programs across Türkiye and beyond.">
+  <meta name="description"
+    content="Yedibasak is an English-speaking NGO dedicated to transparent relief, education, and community-building programs across Türkiye and beyond.">
   <meta name="theme-color" content="#0BB2C1">
   <meta property="og:title" content="Yedibasak — Stewardship for resilient communities">
-  <meta property="og:description" content="Transparent giving, meaningful programs, and accountable impact reporting from the Yedibasak foundation.">
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Yedibasak">
+  <meta property="og:description"
+    content="Transparent giving, meaningful programs, and accountable impact reporting from the Yedibasak foundation.">
+  <meta property="og:image" content="https://example.com/assets/img/media/hero-01.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://example.com">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Yedibasak — NGO landing page">
   <meta name="twitter:description" content="Supporting vulnerable communities with dignity, transparency, and care.">
-  <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Yedibasak">
+  <meta name="twitter:image" content="https://example.com/assets/img/media/hero-01.png">
   <link rel="canonical" href="https://example.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/regular.min.css">
+  <link rel="stylesheet" href="assets/css/solid.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="application/ld+json">
   {
@@ -27,7 +33,7 @@
     "@type": "NGO",
     "name": "Yedibasak",
     "url": "https://yedibasak.org.tr/en",
-    "logo": "https://example.com/assets/img/logo.png",
+    "logo": "https://example.com/assets/img/logo.svg",
     "description": "Yedibasak is a Turkish NGO committed to transparent, community-led programs in relief, education, and sustainable development.",
     "address": {
       "@type": "PostalAddress",
@@ -37,415 +43,1661 @@
   }
   </script>
 </head>
+
 <body class="site">
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <header class="site-header">
+  <header class="site-header" data-header>
     <div class="container header-inner">
-      <a class="brand" href="#">
-        <img src="assets/img/logo.png" alt="Yedibasak" width="48" height="48">
+      <a class="brand" href="#hero" data-scroll="#hero" aria-label="Yedibasak home">
+        <img src="assets/img/logo.svg" alt="Yedibasak" width="180" height="48" loading="eager" decoding="async">
       </a>
+
       <nav class="primary-nav" aria-label="Primary">
         <a href="#about" data-scroll="#about">About</a>
         <a href="#programs" data-scroll="#programs">Programs</a>
-        <a href="#impact" data-scroll="#impact">Impact</a>
+        <a href="#reach" data-scroll="#reach">Reach</a>
         <a href="#news" data-scroll="#news">News</a>
-        <a href="#final-cta" data-scroll="#final-cta">Get Involved</a>
+        <a href="#faq" data-scroll="#faq">FAQ</a>
         <a href="#contact" data-scroll="#contact">Contact</a>
       </nav>
+
       <div class="header-actions">
-        <a class="btn btn-primary" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
-        <a class="btn btn-outline" href="#final-cta" data-scroll="#final-cta">Volunteer</a>
+        <a class="btn btn-outline" href="https://yedibasak.org.tr/en" target="_blank" rel="noopener">
+          Visit website
+        </a>
+        <a class="btn btn-primary" href="#contact" data-scroll="#contact">
+          Contact
+        </a>
       </div>
-      <button class="mobile-nav-toggle" aria-controls="mobile-menu" aria-expanded="false">
-        <span class="sr-only">Open menu</span>
-        <span class="hamburger" aria-hidden="true"></span>
+
+      <button class="mobile-nav-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false"
+        aria-label="Open menu">
+        <i class="fa-solid fa-bars-staggered" aria-hidden="true"></i>
       </button>
     </div>
-    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-modal="true">
-      <div class="mobile-menu-panel">
-        <button class="mobile-menu-close" aria-label="Close navigation">
-          <span></span>
-        </button>
-        <nav aria-label="Mobile primary">
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu__overlay" data-menu-close aria-hidden="true"></div>
+
+      <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Mobile menu">
+        <div class="mobile-menu__top">
+          <a class="brand" href="#hero" data-scroll="#hero" aria-label="Yedibasak home">
+            <img src="assets/img/logo.svg" alt="Yedibasak" width="160" height="42" loading="lazy" decoding="async">
+          </a>
+
+          <button class="mobile-menu__close" type="button" data-menu-close aria-label="Close menu">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <nav class="mobile-nav" aria-label="Mobile primary">
           <a href="#about" data-scroll="#about">About</a>
           <a href="#programs" data-scroll="#programs">Programs</a>
-          <a href="#impact" data-scroll="#impact">Impact</a>
+          <a href="#reach" data-scroll="#reach">Reach</a>
           <a href="#news" data-scroll="#news">News</a>
-          <a href="#final-cta" data-scroll="#final-cta">Get Involved</a>
+          <a href="#faq" data-scroll="#faq">FAQ</a>
           <a href="#contact" data-scroll="#contact">Contact</a>
         </nav>
-        <div class="mobile-menu-cta">
-          <a class="btn btn-primary" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
-          <a class="btn btn-outline" href="#final-cta" data-scroll="#final-cta">Volunteer</a>
+
+        <div class="mobile-actions">
+          <a class="btn btn-outline btn-lg" href="https://yedibasak.org.tr/en" target="_blank" rel="noopener">
+            Visit website
+          </a>
+          <a class="btn btn-primary btn-lg" href="#contact" data-scroll="#contact">
+            Contact
+          </a>
+        </div>
+
+        <div class="mobile-social" aria-label="Social links">
+          <a class="social-btn" href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a class="social-btn" href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a class="social-btn" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
   </header>
 
+
   <main id="main">
     <section id="hero" class="hero-section reveal">
       <div class="container hero-grid">
         <div class="hero-content">
-          <p class="eyebrow">NGO • Community trust</p>
+          <p class="eyebrow">
+            <span class="eyebrow__icon" aria-hidden="true">
+              <!-- simple NGO mark icon -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3l8 4v6c0 5-3.2 8.7-8 10-4.8-1.3-8-5-8-10V7l8-4Z" stroke="currentColor" stroke-width="1.8"
+                  stroke-linejoin="round" />
+                <path d="M8.5 12.2l2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span>NGO</span>
+            <span class="dot" aria-hidden="true">•</span>
+            <span>Community trust</span>
+          </p>
+
           <h1>Yedibasak nurtures communities with care, transparency, and hope.</h1>
-          <p class="lead">We coordinate relief, education, and sustainability programs in Türkiye and neighboring regions while keeping every contribution accountable.</p>
+
+          <p class="lead">
+            We coordinate relief, education, and sustainability programs in Türkiye and neighboring regions while
+            keeping
+            every contribution accountable.
+          </p>
+
           <div class="hero-ctas">
-            <a class="btn btn-primary" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
-            <a class="btn btn-outline" href="#programs" data-scroll="#programs">Explore programs</a>
+            <a class="btn btn-primary btn-lg" href="#featured-campaigns" data-scroll="#featured-campaigns">
+              Donate
+              <span class="btn-icon" aria-hidden="true">→</span>
+            </a>
+
+            <a class="btn btn-outline btn-lg" href="#programs" data-scroll="#programs">
+              Explore programs
+            </a>
           </div>
-          <p class="hero-meta">Transparency reports • Bilingual field teams • Community-led partnerships</p>
+
+          <ul class="hero-meta" aria-label="Highlights">
+            <li>
+              <span class="meta-ic" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              Transparency reports
+            </li>
+            <li>
+              <span class="meta-ic" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              Bilingual field teams
+            </li>
+            <li>
+              <span class="meta-ic" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              Community-led partnerships
+            </li>
+          </ul>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-illustration">
-            <span class="circle"></span>
-            <span class="circle secondary"></span>
-            <span class="bar"></span>
-            <span class="bar secondary"></span>
-          </div>
-          <div class="hero-card">
-            <p>Field team snapshot</p>
-            <strong>12 responders</strong>
-            <p class="muted">Education, relief, and health coordinators across three regions.</p>
+
+        <div class="hero-media">
+          <figure class="hero-figure">
+            <img src="assets/img/media/hero-01.webp"
+              srcset="assets/img/media/hero-01.webp 1x, assets/img/media/hero-01.png 1.8x"
+              alt="Community support initiative" loading="eager" decoding="async" />
+            <figcaption class="sr-only">Yedibasak field work moment</figcaption>
+          </figure>
+
+          <div class="hero-media-card" role="note" aria-label="Field team snapshot">
+            <div class="hero-media-card__top">
+              <span class="chip">
+                <span class="chip__ic" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 10c0 6-9 11-9 11S3 16 3 10a9 9 0 1 1 18 0Z" stroke="currentColor" stroke-width="1.8"
+                      stroke-linejoin="round" />
+                    <path d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.8"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                Field team snapshot
+              </span>
+            </div>
+
+            <div class="kpi">
+              <strong class="kpi__value">12</strong>
+              <span class="kpi__label">responders</span>
+            </div>
+
+            <p class="muted">
+              Education, relief, and health coordinators serving three priority regions.
+            </p>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="stats-section reveal">
-      <div class="container stats-grid">
-        <article>
-          <strong>14,200+</strong>
-          <p>People supported through livelihood and education programs.</p>
-        </article>
-        <article>
-          <strong>32</strong>
-          <p>Active programs delivering relief, health, and learning.</p>
-        </article>
-        <article>
-          <strong>560</strong>
-          <p>Dedicated volunteers and partner leaders.</p>
-        </article>
-        <article>
-          <strong>90</strong>
-          <p>Communities reached with dignified aid and planning.</p>
-        </article>
-      </div>
-    </section>
-
     <section id="about" class="about-section reveal">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">About Yedibasak</p>
-          <h2>Anchored in trust, rooted in community.</h2>
-        </div>
-        <div class="about-content">
-          <p>Since our founding, Yedibasak has paired humanitarian relief with education, health, and community development. Local partners and donors work together so every program is grounded in respect, accountability, and sustainability.</p>
-          <a class="btn btn-link" href="#">Read more about our work</a>
-        </div>
-        <div class="value-grid">
-          <article>
-            <h3>Transparency</h3>
-            <p>Donations are tracked, audited, and shared monthly with our supporters and community councils.</p>
-          </article>
-          <article>
-            <h3>Sustainability</h3>
-            <p>Programs emphasize local leadership, environmentally sensitive facilities, and long-term planning.</p>
-          </article>
-          <article>
-            <h3>Community</h3>
-            <p>Partners inform our initiatives, ensuring services answer real needs with dignity.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+        <div class="about-grid">
+          <!-- Visual side -->
+          <div class="about-visual">
+            <figure class="about-media">
+              <img src="assets/img/about/charity-illustration.webp" alt="Yedibasak community support illustration"
+                loading="lazy" decoding="async" />
+            </figure>
 
-    <section id="programs" class="programs-section reveal">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Programs / Areas of work</p>
-          <h2>Carefully curated paths to community resilience.</h2>
-        </div>
-        <div class="program-grid">
-          <article>
-            <i class="fa-solid fa-hand-holding-medical" aria-hidden="true"></i>
-            <h3>Emergency Relief</h3>
-            <p>Rapid response teams provide shelter, clean water, and psychological first aid.</p>
-            <a class="btn btn-link" href="#">Learn more</a>
-          </article>
-          <article>
-            <i class="fa-solid fa-school" aria-hidden="true"></i>
-            <h3>Education Support</h3>
-            <p>Safe-learning spaces, after-school mentoring, and multilingual materials for children.</p>
-            <a class="btn btn-link" href="#">Learn more</a>
-          </article>
-          <article>
-            <i class="fa-solid fa-utensils" aria-hidden="true"></i>
-          <h3>Food &amp; Essentials</h3>
-            <p>Monthly provisions, hygiene kits, and logistics designed with local partners.</p>
-            <a class="btn btn-link" href="#">Learn more</a>
-          </article>
-          <article>
-            <i class="fa-solid fa-venus" aria-hidden="true"></i>
-          <h3>Women &amp; Family Care</h3>
-            <p>Maternal health, counseling, and safe spaces for women and caregivers.</p>
-            <a class="btn btn-link" href="#">Learn more</a>
-          </article>
-          <article>
-            <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
-            <h3>Health Initiatives</h3>
-            <p>Mobile clinics, mental health support, and preventive care outreach.</p>
-            <a class="btn btn-link" href="#">Learn more</a>
-          </article>
-          <article>
-            <i class="fa-solid fa-sparkles" aria-hidden="true"></i>
-            <h3>Community Development</h3>
-            <p>Infrastructure grants, cooperative projects, and local leadership training.</p>
-            <a class="btn btn-link" href="#">Learn more</a>
-          </article>
+            <div class="about-badge" role="note" aria-label="About highlight">
+              <span class="about-badge__ic" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3l8 4v6c0 5-3.2 8.7-8 10-4.8-1.3-8-5-8-10V7l8-4Z" stroke="currentColor"
+                    stroke-width="1.8" stroke-linejoin="round" />
+                  <path d="M9 12.5l2 2 4-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              <div>
+                <strong>Trust-first operations</strong>
+                <p class="muted">Local partners, documented delivery, and responsible planning.</p>
+              </div>
+            </div>
+
+            <div class="about-mini">
+              <div class="about-mini__item">
+                <span class="k">Relief</span>
+                <span class="v">Fast response</span>
+              </div>
+              <div class="about-mini__item">
+                <span class="k">Education</span>
+                <span class="v">Sustained support</span>
+              </div>
+              <div class="about-mini__item">
+                <span class="k">Community</span>
+                <span class="v">Partner-led</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content side -->
+          <div class="about-content">
+            <p class="eyebrow">
+              <span class="eyebrow__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 19V8l8-4 8 4v11" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                  <path d="M9 22v-8h6v8" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span>About Yedibasak</span>
+            </p>
+
+            <h2 class="about-title">Anchored in trust, rooted in community.</h2>
+
+            <div class="about-story">
+              <p>
+                Since our founding, Yedibasak has paired humanitarian relief with education, health, and community
+                development. We work alongside local partners and donors so programs stay grounded in respect,
+                accountability, and sustainability.
+              </p>
+
+              <div class="about-actions">
+                <a class="btn btn-primary btn-lg" href="#programs" data-scroll="#programs">
+                  Explore our programs
+                  <span class="btn-icon" aria-hidden="true">→</span>
+                </a>
+                <a class="btn btn-link" href="#">Read more about our work</a>
+              </div>
+            </div>
+
+            <div class="pillars" role="list" aria-label="Our pillars">
+              <article class="pillar" role="listitem">
+                <span class="pillar__ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 3l8 4v6c0 5-3.2 8.7-8 10-4.8-1.3-8-5-8-10V7l8-4Z" stroke="currentColor"
+                      stroke-width="1.8" stroke-linejoin="round" />
+                    <path d="M9 12.5l2 2 4-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <h3>Transparency</h3>
+                <p>We document progress and share updates with supporters and community stakeholders.</p>
+              </article>
+
+              <article class="pillar" role="listitem">
+                <span class="pillar__ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 21s-7-4.4-7-11a7 7 0 1 1 14 0c0 6.6-7 11-7 11Z" stroke="currentColor"
+                      stroke-width="1.8" stroke-linejoin="round" />
+                    <path d="M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" stroke="currentColor" stroke-width="1.8" />
+                  </svg>
+                </span>
+                <h3>Sustainability</h3>
+                <p>We prioritize long-term outcomes through local leadership and responsible planning.</p>
+              </article>
+
+              <article class="pillar" role="listitem">
+                <span class="pillar__ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.8"
+                      stroke-linecap="round" />
+                    <path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.8"
+                      stroke-linejoin="round" />
+                    <path d="M22 11a4 4 0 0 1-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <h3>Community</h3>
+                <p>Partners inform our initiatives so services answer real needs with dignity.</p>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="impact" class="impact-section reveal">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Impact &amp; Transparency</p>
-          <h2>Every donation has a clear path to the field.</h2>
-        </div>
-        <div class="impact-grid">
-          <div class="impact-story">
-            <p>We pair donor intent with community priorities through a documented process.</p>
-            <ol>
-              <li>Assessment by field directors and community committees.</li>
-              <li>Program design with measurable outcomes and budget transparency.</li>
-              <li>Implementation, monitoring, and storytelling shared in monthly reports.</li>
-            </ol>
+      <div class="container impact-grid">
+        <!-- Left: narrative + stats -->
+        <div class="impact-content">
+          <p class="eyebrow">
+            <span class="eyebrow__icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3l8 4v6c0 5-3.2 8.7-8 10-4.8-1.3-8-5-8-10V7l8-4Z" stroke="currentColor" stroke-width="1.8"
+                  stroke-linejoin="round" />
+                <path d="M8.5 12.2l2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span>Impact</span>
+            <span class="dot" aria-hidden="true">•</span>
+            <span>Measured and documented</span>
+          </p>
+
+          <h2 class="impact-title">Real outcomes, not vague promises.</h2>
+          <p class="impact-lead">
+            We track delivery, partners, and communities reached — then publish what we can with clarity and context.
+          </p>
+
+          <div class="impact-stats" role="list" aria-label="Key impact metrics">
+            <article class="stat" role="listitem">
+              <div class="stat__top">
+                <span class="stat__ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" />
+                    <path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <strong class="stat__value">14,200+</strong>
+              </div>
+              <p class="stat__text">People supported through livelihood and education programs.</p>
+            </article>
+
+            <article class="stat" role="listitem">
+              <div class="stat__top">
+                <span class="stat__ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 4h16v16H4V4Z" stroke="currentColor" stroke-width="2" />
+                    <path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <strong class="stat__value">32</strong>
+              </div>
+              <p class="stat__text">Active programs delivering relief, health, and learning.</p>
+            </article>
+
+            <article class="stat" role="listitem">
+              <div class="stat__top">
+                <span class="stat__ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 21s-7-4.4-7-11a7 7 0 1 1 14 0c0 6.6-7 11-7 11Z" stroke="currentColor" stroke-width="2"
+                      stroke-linejoin="round" />
+                    <path d="M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </span>
+                <strong class="stat__value">90</strong>
+              </div>
+              <p class="stat__text">Communities reached with dignified aid and planning.</p>
+            </article>
+
+            <article class="stat stat--accent" role="listitem">
+              <div class="stat__top">
+                <span class="stat__ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" />
+                    <path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"
+                      stroke-linejoin="round" />
+                    <path d="M18 8v6M21 11h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <strong class="stat__value">560</strong>
+              </div>
+              <p class="stat__text">Dedicated volunteers and partner leaders.</p>
+            </article>
           </div>
-          <div class="transparency-block">
-            <p class="muted">Transparency</p>
-            <ul>
-              <li>Quarterly reports shared online and by request.</li>
-              <li>Documented procurement and volunteer rosters.</li>
-              <li>Responsible spending guided by local oversight groups.</li>
+
+          <div class="impact-note" role="note" aria-label="Measurement note">
+            <span class="impact-note__ic" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" stroke="currentColor" stroke-width="2" />
+                <path d="M12 16v-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M12 8h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+              </svg>
+            </span>
+            <p>
+              Figures are updated periodically based on field reports and partner documentation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: visual collage -->
+        <div class="impact-visual" aria-label="Impact photo gallery">
+          <div class="impact-collage">
+            <figure class="shot shot--a">
+              <img src="assets/img/impact/01.jpg" alt="Volunteers distributing aid" loading="lazy" decoding="async">
+            </figure>
+            <figure class="shot shot--b">
+              <img src="assets/img/impact/02.jpg" alt="Community support activity" loading="lazy" decoding="async">
+            </figure>
+            <figure class="shot shot--c">
+              <img src="assets/img/impact/03.jpg" alt="Education support moment" loading="lazy" decoding="async">
+            </figure>
+            <figure class="shot shot--d">
+              <img src="assets/img/impact/04.png" alt="Field team delivering essentials" loading="lazy"
+                decoding="async">
+            </figure>
+          </div>
+
+          <div class="impact-mini">
+            <div class="impact-mini__bar" aria-hidden="true">
+              <span class="fill" style="width:72%"></span>
+            </div>
+            <p class="impact-mini__text">
+              <strong>Transparency focus:</strong> program updates, receipts, and documented delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <section id="programs" class="programs-section reveal">
+      <div class="container">
+        <div class="programs-head">
+          <div class="programs-title">
+            <p class="eyebrow">
+              <span class="eyebrow__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3l8 4v6c0 5-3.2 8.7-8 10-4.8-1.3-8-5-8-10V7l8-4Z" stroke="currentColor"
+                    stroke-width="1.8" stroke-linejoin="round" />
+                  <path d="M9 12.5l2 2 4-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              Programs / Areas of work
+            </p>
+            <h2 class="programs-h">Programs designed for real community resilience.</h2>
+            <p class="muted programs-sub">
+              From emergency response to long-term development — each program is built with local partners and clear
+              reporting.
+            </p>
+          </div>
+
+          <div class="programs-actions">
+            <a class="btn btn-primary btn-lg" href="#featured-campaigns" data-scroll="#featured-campaigns">
+              Donate
+              <span class="btn-icon" aria-hidden="true">→</span>
+            </a>
+
+            <div class="programs-nav" aria-label="Programs slider navigation">
+              <button class="swiper-btn swiper-btn-prev" type="button" aria-label="Previous programs">
+                <span aria-hidden="true">←</span>
+              </button>
+              <button class="swiper-btn swiper-btn-next" type="button" aria-label="Next programs">
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="programs-slider-wrap">
+          <div class="swiper programs-swiper" aria-label="Programs slider">
+            <div class="swiper-wrapper">
+
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <article class="program-card">
+                  <div class="program-card__media">
+                    <img src="assets/img/bg/bg_activities.webp" alt="Emergency relief support" loading="lazy"
+                      decoding="async">
+                    <span class="badge badge--teal">
+                      <span class="badge__ic" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                          <path d="M21 10c0 6-9 11-9 11S3 16 3 10a9 9 0 1 1 18 0Z" stroke="currentColor"
+                            stroke-width="1.8" stroke-linejoin="round" />
+                          <path d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.8"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                      Relief
+                    </span>
+                  </div>
+
+                  <div class="program-card__body">
+                    <h3>Emergency Relief</h3>
+                    <p>Rapid response teams provide shelter, clean water, and immediate support with local coordination.
+                    </p>
+                    <ul class="program-tags" aria-label="Highlights">
+                      <li>Rapid response</li>
+                      <li>Essentials</li>
+                      <li>Coordination</li>
+                    </ul>
+                    <div class="program-card__footer">
+                      <a class="btn btn-link" href="#">Learn more</a>
+                      <a class="btn btn-ghost" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <article class="program-card">
+                  <div class="program-card__media">
+                    <img src="assets/img/about/offer-large.webp" alt="Education support classes" loading="lazy"
+                      decoding="async">
+                    <span class="badge badge--orange">
+                      <span class="badge__ic" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                          <path d="M4 6l8-3 8 3-8 3-8-3Z" stroke="currentColor" stroke-width="1.8"
+                            stroke-linejoin="round" />
+                          <path d="M6 10v6c2 2 10 2 12 0v-6" stroke="currentColor" stroke-width="1.8"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                      Education
+                    </span>
+                  </div>
+
+                  <div class="program-card__body">
+                    <h3>Education Support</h3>
+                    <p>Safe-learning spaces, mentoring, and multilingual materials to keep children engaged and
+                      protected.</p>
+                    <ul class="program-tags" aria-label="Highlights">
+                      <li>After-school</li>
+                      <li>Mentoring</li>
+                      <li>Materials</li>
+                    </ul>
+                    <div class="program-card__footer">
+                      <a class="btn btn-link" href="#">Learn more</a>
+                      <a class="btn btn-ghost" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <article class="program-card">
+                  <div class="program-card__media">
+                    <img src="assets/img/about/offer-small.webp" alt="Food distribution" loading="lazy"
+                      decoding="async">
+                    <span class="badge badge--green">
+                      <span class="badge__ic" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                          <path d="M7 7h10v14H7V7Z" stroke="currentColor" stroke-width="1.8" />
+                          <path d="M9 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.8"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                      Essentials
+                    </span>
+                  </div>
+
+                  <div class="program-card__body">
+                    <h3>Food &amp; Essentials</h3>
+                    <p>Monthly provisions, hygiene kits, and logistics designed with local partners for fair access.</p>
+                    <ul class="program-tags" aria-label="Highlights">
+                      <li>Food parcels</li>
+                      <li>Hygiene</li>
+                      <li>Logistics</li>
+                    </ul>
+                    <div class="program-card__footer">
+                      <a class="btn btn-link" href="#">Learn more</a>
+                      <a class="btn btn-ghost" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="swiper-slide">
+                <article class="program-card">
+                  <div class="program-card__media">
+                    <img src="assets/img/bg/bg_activities.webp" alt="Women and family care" loading="lazy"
+                      decoding="async">
+                    <span class="badge badge--teal">
+                      <span class="badge__ic" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 21s-7-4.4-7-11a7 7 0 1 1 14 0c0 6.6-7 11-7 11Z" stroke="currentColor"
+                            stroke-width="1.8" stroke-linejoin="round" />
+                          <path d="M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" stroke="currentColor"
+                            stroke-width="1.8" />
+                        </svg>
+                      </span>
+                      Care
+                    </span>
+                  </div>
+
+                  <div class="program-card__body">
+                    <h3>Women &amp; Family Care</h3>
+                    <p>Maternal health support, counseling, and safe spaces that protect women and caregivers.</p>
+                    <ul class="program-tags" aria-label="Highlights">
+                      <li>Maternal</li>
+                      <li>Counseling</li>
+                      <li>Safe spaces</li>
+                    </ul>
+                    <div class="program-card__footer">
+                      <a class="btn btn-link" href="#">Learn more</a>
+                      <a class="btn btn-ghost" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="swiper-slide">
+                <article class="program-card">
+                  <div class="program-card__media">
+                    <img src="assets/img/about/offer-large.webp" alt="Health initiatives" loading="lazy"
+                      decoding="async">
+                    <span class="badge badge--green">
+                      <span class="badge__ic" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                          <path d="M10 21h4v-7h7v-4h-7V3h-4v7H3v4h7v7Z" stroke="currentColor" stroke-width="1.8"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                      Health
+                    </span>
+                  </div>
+
+                  <div class="program-card__body">
+                    <h3>Health Initiatives</h3>
+                    <p>Mobile clinics, mental health support, and preventive care outreach for vulnerable groups.</p>
+                    <ul class="program-tags" aria-label="Highlights">
+                      <li>Clinics</li>
+                      <li>Mental health</li>
+                      <li>Prevention</li>
+                    </ul>
+                    <div class="program-card__footer">
+                      <a class="btn btn-link" href="#">Learn more</a>
+                      <a class="btn btn-ghost" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Slide 6 -->
+              <div class="swiper-slide">
+                <article class="program-card">
+                  <div class="program-card__media">
+                    <img src="assets/img/about/offer-small.webp" alt="Community development" loading="lazy"
+                      decoding="async">
+                    <span class="badge badge--orange">
+                      <span class="badge__ic" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                          <path d="M3 10l9-7 9 7v11H3V10Z" stroke="currentColor" stroke-width="1.8"
+                            stroke-linejoin="round" />
+                          <path d="M9 21v-7h6v7" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                      Development
+                    </span>
+                  </div>
+
+                  <div class="program-card__body">
+                    <h3>Community Development</h3>
+                    <p>Infrastructure grants, cooperative projects, and local leadership training for long-term
+                      stability.</p>
+                    <ul class="program-tags" aria-label="Highlights">
+                      <li>Infrastructure</li>
+                      <li>Co-ops</li>
+                      <li>Training</li>
+                    </ul>
+                    <div class="program-card__footer">
+                      <a class="btn btn-link" href="#">Learn more</a>
+                      <a class="btn btn-ghost" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+            </div>
+
+            <div class="swiper-pagination programs-pagination" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section id="reach" class="reach-section reveal" aria-labelledby="reach-title">
+      <div class="container reach-grid">
+        <div class="reach-copy">
+          <p class="eyebrow">
+            <span class="eyebrow__icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 21s-7-4.4-7-11a7 7 0 1 1 14 0c0 6.6-7 11-7 11Z" stroke="currentColor" stroke-width="1.8"
+                  stroke-linejoin="round" />
+                <path d="M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" stroke="currentColor" stroke-width="1.8" />
+              </svg>
+            </span>
+            Global reach
+          </p>
+
+          <h2 id="reach-title" class="reach-title">Programs guided by local partnerships.</h2>
+
+          <p class="reach-lead">
+            Yedibasak operates across Türkiye with spillover support to neighboring communities — coordinated through
+            community councils and reinforced by clear reporting.
+          </p>
+
+          <div class="reach-kpis" role="list" aria-label="Coverage summary">
+            <article class="reach-kpi" role="listitem">
+              <span class="reach-kpi__ic" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M21 10c0 6-9 11-9 11S3 16 3 10a9 9 0 1 1 18 0Z" stroke="currentColor" stroke-width="1.8"
+                    stroke-linejoin="round" />
+                  <path d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.8"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              <div>
+                <strong>Regional hubs</strong>
+                <p class="muted">Coordinated field coverage and partner delivery.</p>
+              </div>
+            </article>
+
+            <article class="reach-kpi" role="listitem">
+              <span class="reach-kpi__ic" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 4h16v16H4V4Z" stroke="currentColor" stroke-width="1.8" />
+                  <path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </span>
+              <div>
+                <strong>Documented reporting</strong>
+                <p class="muted">Updates and proof of delivery based on field logs.</p>
+              </div>
+            </article>
+
+            <article class="reach-kpi" role="listitem">
+              <span class="reach-kpi__ic" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" />
+                  <path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.8"
+                    stroke-linejoin="round" />
+                  <path d="M22 11a4 4 0 0 1-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </span>
+              <div>
+                <strong>Partner network</strong>
+                <p class="muted">Local organizations supporting delivery and follow-up.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="reach-legend" aria-label="Map legend">
+            <span class="legend-item">
+              <span class="dot dot--teal" aria-hidden="true"></span> Primary hubs
+            </span>
+            <span class="legend-item">
+              <span class="dot dot--orange" aria-hidden="true"></span> Active communities
+            </span>
+            <span class="legend-item">
+              <span class="dot dot--green" aria-hidden="true"></span> Partner locations
+            </span>
+          </div>
+        </div>
+
+        <div class="reach-visual" aria-label="Reach map visual">
+          <div class="reach-map-card">
+            <div class="reach-map-top">
+              <strong>Coverage overview</strong>
+              <span class="muted">Türkiye & neighboring communities</span>
+            </div>
+
+            <figure class="reach-map">
+              <img src="assets/img/maps/world.svg" alt="Map of Yedibasak program reach" loading="lazy" decoding="async">
+            </figure>
+
+            <!-- Decorative pins (pure UI, not real geodata) -->
+            <span class="pin pin--a" aria-hidden="true"></span>
+            <span class="pin pin--b" aria-hidden="true"></span>
+            <span class="pin pin--c" aria-hidden="true"></span>
+
+            <div class="reach-map-footer">
+              <span class="pill">Field coordination</span>
+              <span class="pill">Partner delivery</span>
+              <span class="pill">Follow-up</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="featured-campaigns" class="initiatives-section reveal" aria-labelledby="initiatives-title">
+      <div class="container">
+        <div class="initiatives-head">
+          <div>
+            <p class="eyebrow">
+              <span class="eyebrow__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3l8 4v6c0 5-3.2 8.7-8 10-4.8-1.3-8-5-8-10V7l8-4Z" stroke="currentColor"
+                    stroke-width="1.8" stroke-linejoin="round" />
+                  <path d="M9 12.5l2 2 4-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              Featured initiatives
+            </p>
+            <h2 id="initiatives-title" class="initiatives-title">Initiatives built for measurable outcomes.</h2>
+            <p class="muted initiatives-sub">
+              A snapshot of workstreams that combine field delivery, partner coordination, and documented follow-up.
+            </p>
+          </div>
+
+          <div class="initiatives-nav" aria-label="Initiatives slider navigation">
+            <button class="swiper-btn swiper-btn-prev-i" type="button" aria-label="Previous initiatives">
+              <span aria-hidden="true">←</span>
+            </button>
+            <button class="swiper-btn swiper-btn-next-i" type="button" aria-label="Next initiatives">
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Highlight (No donation) -->
+        <article class="initiative-highlight">
+          <div class="initiative-highlight__copy">
+            <span class="badge badge--teal">
+              <span class="badge__ic" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 4h16v16H4V4Z" stroke="currentColor" stroke-width="1.8" />
+                  <path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </span>
+              Priority initiative
+            </span>
+
+            <h3>Emergency Response Coordination</h3>
+            <p>
+              A coordinated response model that connects local councils, partner logistics, and documented field
+              delivery —
+              enabling faster support and clearer accountability.
+            </p>
+
+            <ul class="initiative-bullets" aria-label="Highlights">
+              <li>
+                <span class="bullet-ic" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                Partner-led distribution and follow-up
+              </li>
+              <li>
+                <span class="bullet-ic" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                Clear reporting on delivery milestones
+              </li>
+              <li>
+                <span class="bullet-ic" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                Community council coordination
+              </li>
             </ul>
+
+            <div class="initiative-cta">
+              <a class="btn btn-primary btn-lg" href="https://yedibasak.org.tr/en" target="_blank" rel="noopener">
+                Visit official website <span class="btn-icon" aria-hidden="true">→</span>
+              </a>
+              <a class="btn btn-outline btn-lg" href="#reach" data-scroll="#reach">See coverage</a>
+            </div>
+          </div>
+
+          <div class="initiative-highlight__media" aria-hidden="true">
+            <img src="assets/img/donate/donate-hero.webp" alt="" loading="lazy" decoding="async">
+          </div>
+        </article>
+
+        <!-- Slider -->
+        <div class="initiatives-slider-wrap">
+          <div class="swiper initiatives-swiper" aria-label="Featured initiatives slider">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <article class="initiative-card">
+                  <div class="initiative-card__top">
+                    <span class="badge badge--orange">Education</span>
+                    <a class="icon-btn" href="https://yedibasak.org.tr/en" target="_blank" rel="noopener"
+                      aria-label="Open initiative">
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                  <h3>Schoolkits for Children</h3>
+                  <p>Learning supplies and support to keep children engaged in safe, structured education.</p>
+                  <ul class="meta-list">
+                    <li><span class="dot dot--orange" aria-hidden="true"></span> Materials</li>
+                    <li><span class="dot dot--orange" aria-hidden="true"></span> Mentoring</li>
+                    <li><span class="dot dot--orange" aria-hidden="true"></span> Safe spaces</li>
+                  </ul>
+                  <div class="initiative-actions">
+                    <a class="btn btn-link" href="#">View details</a>
+                    <a class="btn btn-ghost" href="#programs" data-scroll="#programs">Related programs</a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="initiative-card">
+                  <div class="initiative-card__top">
+                    <span class="badge badge--green">Health</span>
+                    <a class="icon-btn" href="https://yedibasak.org.tr/en" target="_blank" rel="noopener"
+                      aria-label="Open initiative">
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                  <h3>Community Health Units</h3>
+                  <p>Mobile outreach supporting maternal health, mental health, and preventive care in underserved
+                    areas.</p>
+                  <ul class="meta-list">
+                    <li><span class="dot dot--green" aria-hidden="true"></span> Mobile clinics</li>
+                    <li><span class="dot dot--green" aria-hidden="true"></span> Counseling</li>
+                    <li><span class="dot dot--green" aria-hidden="true"></span> Prevention</li>
+                  </ul>
+                  <div class="initiative-actions">
+                    <a class="btn btn-link" href="#">View details</a>
+                    <a class="btn btn-ghost" href="#programs" data-scroll="#programs">Related programs</a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="initiative-card">
+                  <div class="initiative-card__top">
+                    <span class="badge badge--teal">Development</span>
+                    <a class="icon-btn" href="https://yedibasak.org.tr/en" target="_blank" rel="noopener"
+                      aria-label="Open initiative">
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                  <h3>Women-led Microgrants</h3>
+                  <p>Seed funding models that strengthen households through cooperative, community-led enterprises.</p>
+                  <ul class="meta-list">
+                    <li><span class="dot dot--teal" aria-hidden="true"></span> Microgrants</li>
+                    <li><span class="dot dot--teal" aria-hidden="true"></span> Training</li>
+                    <li><span class="dot dot--teal" aria-hidden="true"></span> Follow-up</li>
+                  </ul>
+                  <div class="initiative-actions">
+                    <a class="btn btn-link" href="#">View details</a>
+                    <a class="btn btn-ghost" href="#programs" data-scroll="#programs">Related programs</a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="initiative-card">
+                  <div class="initiative-card__top">
+                    <span class="badge badge--orange">Relief</span>
+                    <a class="icon-btn" href="https://yedibasak.org.tr/en" target="_blank" rel="noopener"
+                      aria-label="Open initiative">
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                  <h3>Winter Essentials</h3>
+                  <p>Seasonal support packages tailored for families in colder regions and temporary housing.</p>
+                  <ul class="meta-list">
+                    <li><span class="dot dot--orange" aria-hidden="true"></span> Winter kits</li>
+                    <li><span class="dot dot--orange" aria-hidden="true"></span> Heating support</li>
+                    <li><span class="dot dot--orange" aria-hidden="true"></span> Logistics</li>
+                  </ul>
+                  <div class="initiative-actions">
+                    <a class="btn btn-link" href="#">View details</a>
+                    <a class="btn btn-ghost" href="#programs" data-scroll="#programs">Related programs</a>
+                  </div>
+                </article>
+              </div>
+
+            </div>
+
+            <div class="swiper-pagination initiatives-pagination" aria-hidden="true"></div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section id="featured-campaigns" class="campaigns-section reveal">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Featured campaigns</p>
-          <h2>Support initiatives that are ready to scale.</h2>
-        </div>
-        <div class="campaign-grid">
-          <article>
-            <div class="campaign-header">
-              <h3>Schoolkits for Children</h3>
-              <span>Education Support</span>
-            </div>
-            <p>Delivering supplies to 400 children in rural districts.</p>
-            <div class="campaign-progress" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-              <span>65% funded</span>
-              <div class="progress-track">
-                <div class="progress-fill" style="width: 65%;"></div>
-              </div>
-            </div>
-            <div class="campaign-actions">
-              <a class="btn btn-primary" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
-              <a class="btn btn-link" href="#">Share</a>
-            </div>
-          </article>
-          <article>
-            <div class="campaign-header">
-              <h3>Community Health Units</h3>
-              <span>Health Initiatives</span>
-            </div>
-            <p>Mobile teams supporting maternal and mental health clinics.</p>
-            <div class="campaign-progress" role="progressbar" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100">
-              <span>48% funded</span>
-              <div class="progress-track">
-                <div class="progress-fill" style="width: 48%;"></div>
-              </div>
-            </div>
-            <div class="campaign-actions">
-              <a class="btn btn-primary" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
-              <a class="btn btn-link" href="#">Share</a>
-            </div>
-          </article>
-          <article>
-            <div class="campaign-header">
-              <h3>Women-led Microgrants</h3>
-              <span>Community Development</span>
-            </div>
-            <p>Seed funding for cooperative enterprises managed by local women.</p>
-            <div class="campaign-progress" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
-              <span>72% funded</span>
-              <div class="progress-track">
-                <div class="progress-fill" style="width: 72%;"></div>
-              </div>
-            </div>
-            <div class="campaign-actions">
-              <a class="btn btn-primary" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
-              <a class="btn btn-link" href="#">Share</a>
-            </div>
-          </article>
-        </div>
         <div class="section-link">
-          <a class="btn btn-link" href="#">View all campaigns</a>
+          <a class="btn btn-link" href="https://yedibasak.org.tr/en" target="_blank" rel="noopener">Explore more on the
+            official website</a>
         </div>
       </div>
     </section>
 
-    <section id="news" class="news-section reveal">
+
+    <section id="news" class="news-section reveal" aria-labelledby="news-title">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">News &amp; updates</p>
-          <h2>Stories from the field.</h2>
+        <div class="news-head">
+          <div>
+            <p class="eyebrow">
+              <span class="eyebrow__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"
+                    stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                  <path d="M8 8h7M8 12h9M8 16h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </span>
+              News &amp; updates
+            </p>
+            <h2 id="news-title" class="news-title">Stories from the field.</h2>
+            <p class="muted news-sub">
+              Brief updates that highlight delivery milestones, partner coordination, and community outcomes.
+            </p>
+          </div>
+
+          <div class="news-actions">
+            <a class="btn btn-outline btn-lg" href="https://yedibasak.org.tr/en" target="_blank" rel="noopener">
+              Visit official website
+            </a>
+
+            <div class="news-nav" aria-label="News slider navigation">
+              <button class="swiper-btn swiper-btn-prev-n" type="button" aria-label="Previous news">
+                <span aria-hidden="true">←</span>
+              </button>
+              <button class="swiper-btn swiper-btn-next-n" type="button" aria-label="Next news">
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="news-grid">
-          <article>
-            <p class="news-date">Feb 14, 2026</p>
-            <h3>New community kitchens open in Gaziantep</h3>
-            <p>Local chefs and volunteers are collaborating to prepare nourishment with dignity.</p>
-          </article>
-          <article>
-            <p class="news-date">Jan 28, 2026</p>
-            <h3>Education mentors graduate their first cohort</h3>
-            <p>Thirty mentors completed training and now support girls in bilingual literacy programs.</p>
-          </article>
-          <article>
-            <p class="news-date">Jan 10, 2026</p>
-            <h3>Transparency reports reach every donor</h3>
-            <p>Monthly dashboards now translate into English and Arabic to widen accountability.</p>
-          </article>
+
+        <div class="news-slider-wrap">
+          <div class="swiper news-swiper" aria-label="News slider">
+            <div class="swiper-wrapper">
+
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <article class="news-card">
+                  <a class="news-card__link" href="#" aria-label="Read: New community kitchens open in Gaziantep">
+                    <figure class="news-card__media">
+                      <img src="assets/img/media/01.webp" alt="Community kitchens" loading="lazy" decoding="async">
+                      <span class="news-badge">Field update</span>
+                    </figure>
+
+                    <div class="news-card__body">
+                      <div class="news-meta">
+                        <time class="news-date" datetime="2026-02-14">Feb 14, 2026</time>
+                        <span class="news-dot" aria-hidden="true"></span>
+                        <span class="news-read">4 min read</span>
+                      </div>
+
+                      <h3>New community kitchens open in Gaziantep</h3>
+                      <p>Local chefs and volunteers collaborate to prepare nourishment with dignity.</p>
+
+                      <div class="news-card__foot">
+                        <span class="news-cta">Read story</span>
+                        <span class="news-arrow" aria-hidden="true">→</span>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <article class="news-card">
+                  <a class="news-card__link" href="#" aria-label="Read: Education mentors graduate their first cohort">
+                    <figure class="news-card__media">
+                      <img src="assets/img/media/02.webp" alt="Education mentors" loading="lazy" decoding="async">
+                      <span class="news-badge news-badge--orange">Education</span>
+                    </figure>
+
+                    <div class="news-card__body">
+                      <div class="news-meta">
+                        <time class="news-date" datetime="2026-01-28">Jan 28, 2026</time>
+                        <span class="news-dot" aria-hidden="true"></span>
+                        <span class="news-read">3 min read</span>
+                      </div>
+
+                      <h3>Education mentors graduate their first cohort</h3>
+                      <p>Thirty mentors completed training and now support girls in bilingual literacy programs.</p>
+
+                      <div class="news-card__foot">
+                        <span class="news-cta">Read story</span>
+                        <span class="news-arrow" aria-hidden="true">→</span>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <article class="news-card">
+                  <a class="news-card__link" href="#" aria-label="Read: Transparency reports reach every donor">
+                    <figure class="news-card__media">
+                      <img src="assets/img/media/03.webp" alt="Transparency report" loading="lazy" decoding="async">
+                      <span class="news-badge news-badge--green">Reporting</span>
+                    </figure>
+
+                    <div class="news-card__body">
+                      <div class="news-meta">
+                        <time class="news-date" datetime="2026-01-10">Jan 10, 2026</time>
+                        <span class="news-dot" aria-hidden="true"></span>
+                        <span class="news-read">5 min read</span>
+                      </div>
+
+                      <h3>Transparency reports reach every donor</h3>
+                      <p>Monthly dashboards translate into English and Arabic to widen accountability.</p>
+
+                      <div class="news-card__foot">
+                        <span class="news-cta">Read story</span>
+                        <span class="news-arrow" aria-hidden="true">→</span>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              </div>
+
+              <!-- Slide 4 (optional extra) -->
+              <div class="swiper-slide">
+                <article class="news-card">
+                  <a class="news-card__link" href="#" aria-label="Read: Partner coordination expands outreach">
+                    <figure class="news-card__media">
+                      <img src="assets/img/media/01.webp" alt="Partner coordination" loading="lazy" decoding="async">
+                      <span class="news-badge">Partnerships</span>
+                    </figure>
+
+                    <div class="news-card__body">
+                      <div class="news-meta">
+                        <time class="news-date" datetime="2026-01-02">Jan 2, 2026</time>
+                        <span class="news-dot" aria-hidden="true"></span>
+                        <span class="news-read">2 min read</span>
+                      </div>
+
+                      <h3>Partner coordination expands outreach</h3>
+                      <p>New local partners increase delivery speed and improve community follow-up.</p>
+
+                      <div class="news-card__foot">
+                        <span class="news-cta">Read story</span>
+                        <span class="news-arrow" aria-hidden="true">→</span>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              </div>
+
+            </div>
+
+            <div class="swiper-pagination news-pagination" aria-hidden="true"></div>
+          </div>
         </div>
+
         <div class="section-link">
           <a class="btn btn-link" href="#">View all news</a>
         </div>
       </div>
     </section>
 
-    <section class="testimonials-section reveal">
+
+    <section class="testimonials-section reveal" aria-labelledby="t-title">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Testimonials</p>
-          <h2>Partners in long-term care.</h2>
+        <div class="t-head">
+          <div>
+            <p class="eyebrow">
+              <span class="eyebrow__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 7h6v6H7V7Z" stroke="currentColor" stroke-width="1.8" />
+                  <path d="M13 7h4v6h-4V7Z" stroke="currentColor" stroke-width="1.8" />
+                  <path d="M7 13h4v4H7v-4Z" stroke="currentColor" stroke-width="1.8" />
+                </svg>
+              </span>
+              Testimonials
+            </p>
+            <h2 id="t-title" class="t-title">Partners in long-term care.</h2>
+            <p class="muted t-sub">Words from partners, volunteers, and community leaders who work alongside Yedibasak.
+            </p>
+          </div>
+
+          <div class="t-nav" aria-label="Testimonials slider navigation">
+            <button class="swiper-btn swiper-btn-prev-t" type="button" aria-label="Previous testimonials">
+              <span aria-hidden="true">←</span>
+            </button>
+            <button class="swiper-btn swiper-btn-next-t" type="button" aria-label="Next testimonials">
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
         </div>
-        <div class="testimonials-grid">
-          <article>
-            <p>“Yedibasak grounds every project in local oversight so donors and families trust that resources reach the field.”</p>
-            <strong>Anaïs Legrand</strong>
-            <small>Volunteer coordinator, Marseille Fellowship</small>
-          </article>
-          <article>
-            <p>“Their reports make it clear exactly how relief and education dollars were invested in each village cluster.”</p>
-            <strong>Selim Korkmaz</strong>
-            <small>Community liaison, Southeastern Initiative</small>
-          </article>
-          <article>
-            <p>“We know our gifts are matched with locally led plans and responsible partners.”</p>
-            <strong>Emilia Park</strong>
-            <small>Donor, Global Compassion Collective</small>
-          </article>
+
+        <div class="swiper t-swiper" aria-label="Testimonials slider">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <article class="t-card">
+                <div class="t-card__top">
+                  <img src="assets/img/avatars/01.webp" alt="Anaïs Legrand" class="t-avatar" loading="lazy"
+                    decoding="async">
+                  <div class="t-person">
+                    <strong>Anaïs Legrand</strong>
+                    <small>Volunteer coordinator, Marseille Fellowship</small>
+                  </div>
+                </div>
+
+                <div class="t-quote">
+                  <span class="t-quote__ic" aria-hidden="true">“</span>
+                  <p>Yedibasak grounds every project in local oversight so partners and families trust that resources
+                    reach the field.</p>
+                </div>
+
+                <div class="t-stars" aria-label="Rating">
+                  <span aria-hidden="true">★★★★★</span>
+                  <span class="sr-only">5 out of 5</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="t-card">
+                <div class="t-card__top">
+                  <img src="assets/img/avatars/02.jpg" alt="Selim Korkmaz" class="t-avatar" loading="lazy"
+                    decoding="async">
+                  <div class="t-person">
+                    <strong>Selim Korkmaz</strong>
+                    <small>Community liaison, Southeastern Initiative</small>
+                  </div>
+                </div>
+
+                <div class="t-quote">
+                  <span class="t-quote__ic" aria-hidden="true">“</span>
+                  <p>The reporting makes it clear how initiatives are implemented and how outcomes are tracked across
+                    communities.</p>
+                </div>
+
+                <div class="t-stars" aria-label="Rating">
+                  <span aria-hidden="true">★★★★★</span>
+                  <span class="sr-only">5 out of 5</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="t-card">
+                <div class="t-card__top">
+                  <img src="assets/img/avatars/03.webp" alt="Emilia Park" class="t-avatar" loading="lazy"
+                    decoding="async">
+                  <div class="t-person">
+                    <strong>Emilia Park</strong>
+                    <small>Partner, Global Compassion Collective</small>
+                  </div>
+                </div>
+
+                <div class="t-quote">
+                  <span class="t-quote__ic" aria-hidden="true">“</span>
+                  <p>We see locally-led planning and responsible partnerships reflected in every update and milestone.
+                  </p>
+                </div>
+
+                <div class="t-stars" aria-label="Rating">
+                  <span aria-hidden="true">★★★★★</span>
+                  <span class="sr-only">5 out of 5</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="t-card">
+                <div class="t-card__top">
+                  <img src="assets/img/avatars/04.webp" alt="Ibrahim Aksoy" class="t-avatar" loading="lazy"
+                    decoding="async">
+                  <div class="t-person">
+                    <strong>Ibrahim Aksoy</strong>
+                    <small>Field operations, Gaziantep</small>
+                  </div>
+                </div>
+
+                <div class="t-quote">
+                  <span class="t-quote__ic" aria-hidden="true">“</span>
+                  <p>Updates come directly from the field, so every stakeholder stays informed with clarity and context.
+                  </p>
+                </div>
+
+                <div class="t-stars" aria-label="Rating">
+                  <span aria-hidden="true">★★★★★</span>
+                  <span class="sr-only">5 out of 5</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="t-card">
+                <div class="t-card__top">
+                  <img src="assets/img/avatars/05.webp" alt="Leyla Demir" class="t-avatar" loading="lazy"
+                    decoding="async">
+                  <div class="t-person">
+                    <strong>Leyla Demir</strong>
+                    <small>Community liaison, Southeastern Initiative</small>
+                  </div>
+                </div>
+
+                <div class="t-quote">
+                  <span class="t-quote__ic" aria-hidden="true">“</span>
+                  <p>Families receive dignity, not just aid — and progress is documented in a way communities can
+                    understand.</p>
+                </div>
+
+                <div class="t-stars" aria-label="Rating">
+                  <span aria-hidden="true">★★★★★</span>
+                  <span class="sr-only">5 out of 5</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="t-card">
+                <div class="t-card__top">
+                  <img src="assets/img/avatars/06.webp" alt="Mira Shaw" class="t-avatar" loading="lazy"
+                    decoding="async">
+                  <div class="t-person">
+                    <strong>Mira Shaw</strong>
+                    <small>Partner, Global Compassion Collective</small>
+                  </div>
+                </div>
+
+                <div class="t-quote">
+                  <span class="t-quote__ic" aria-hidden="true">“</span>
+                  <p>Transparency is treated as a standard — updates, milestones, and verification are communicated
+                    consistently.</p>
+                </div>
+
+                <div class="t-stars" aria-label="Rating">
+                  <span aria-hidden="true">★★★★★</span>
+                  <span class="sr-only">5 out of 5</span>
+                </div>
+              </article>
+            </div>
+
+          </div>
+
+          <div class="swiper-pagination t-pagination" aria-hidden="true"></div>
         </div>
       </div>
     </section>
+    <section class="gallery-section reveal" aria-labelledby="g-title">
+      <div class="container">
+        <div class="g-head">
+          <div>
+            <p class="eyebrow">Moments in motion</p>
+            <h2 id="g-title" class="g-title">On the ground with our teams.</h2>
+            <p class="muted g-sub">A quick glimpse into coordination, distribution, and community workshops.</p>
+          </div>
 
-    <section id="faq" class="faq-section reveal">
+          <div class="g-nav" aria-label="Gallery navigation">
+            <button class="swiper-btn swiper-btn-prev-g" type="button" aria-label="Previous image">
+              <span aria-hidden="true">←</span>
+            </button>
+            <button class="swiper-btn swiper-btn-next-g" type="button" aria-label="Next image">
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="g-wrap">
+          <div class="swiper gallery-main" aria-label="Gallery main slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="assets/img/agenda/slide-1.webp" alt="Team coordinating" loading="lazy"
+                  decoding="async"></div>
+              <div class="swiper-slide"><img src="assets/img/agenda/slide-2.webp" alt="Distribution" loading="lazy"
+                  decoding="async"></div>
+              <div class="swiper-slide"><img src="assets/img/agenda/slide-3.webp" alt="Community workshop"
+                  loading="lazy" decoding="async"></div>
+              <div class="swiper-slide"><img src="assets/img/agenda/slide-4.webp" alt="Volunteer meeting" loading="lazy"
+                  decoding="async"></div>
+            </div>
+            <div class="swiper-pagination g-pagination" aria-hidden="true"></div>
+          </div>
+
+          <div class="swiper gallery-thumbs" aria-label="Gallery thumbnails">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="assets/img/agenda/slide-1.webp" alt="" loading="lazy"
+                  decoding="async"></div>
+              <div class="swiper-slide"><img src="assets/img/agenda/slide-2.webp" alt="" loading="lazy"
+                  decoding="async"></div>
+              <div class="swiper-slide"><img src="assets/img/agenda/slide-3.webp" alt="" loading="lazy"
+                  decoding="async"></div>
+              <div class="swiper-slide"><img src="assets/img/agenda/slide-4.webp" alt="" loading="lazy"
+                  decoding="async"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="partners" class="partners-section reveal" aria-labelledby="p-title">
+      <div class="container">
+        <div class="p-head">
+          <div>
+            <p class="eyebrow">Partners &amp; sponsors</p>
+            <h2 id="p-title" class="p-title">Grateful for collaborative support.</h2>
+            <p class="muted p-sub">A network of partners and sponsors helping programs stay consistent and accountable.
+            </p>
+          </div>
+
+          <div class="p-nav" aria-label="Partners slider navigation">
+            <button class="swiper-btn swiper-btn-prev-p" type="button" aria-label="Previous partners">
+              <span aria-hidden="true">←</span>
+            </button>
+            <button class="swiper-btn swiper-btn-next-p" type="button" aria-label="Next partners">
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="swiper partners-swiper" aria-label="Partners slider">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <figure class="logo-card">
+                <img src="assets/img/sponsor/body.svg" alt="Partner logo" loading="lazy" decoding="async">
+              </figure>
+            </div>
+
+            <div class="swiper-slide">
+              <figure class="logo-card">
+                <img src="assets/img/sponsor/cloth.svg" alt="Partner logo" loading="lazy" decoding="async">
+              </figure>
+            </div>
+
+            <div class="swiper-slide">
+              <figure class="logo-card">
+                <img src="assets/img/sponsor/food.svg" alt="Partner logo" loading="lazy" decoding="async">
+              </figure>
+            </div>
+
+            <div class="swiper-slide">
+              <figure class="logo-card">
+                <img src="assets/img/partners/partner-happy.svg" alt="Partner logo" loading="lazy" decoding="async">
+              </figure>
+            </div>
+
+            <div class="swiper-slide">
+              <figure class="logo-card">
+                <img src="assets/img/partners/partner-stationary.svg" alt="Partner logo" loading="lazy"
+                  decoding="async">
+              </figure>
+            </div>
+
+            <div class="swiper-slide">
+              <figure class="logo-card">
+                <img src="assets/img/partners/partner-toy.svg" alt="Partner logo" loading="lazy" decoding="async">
+              </figure>
+            </div>
+
+          </div>
+
+          <div class="swiper-pagination p-pagination" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+    <section id="faq" class="faq-section reveal" aria-labelledby="f-title">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">FAQ</p>
-          <h2>Questions we hear from supporters.</h2>
+          <h2 id="f-title">Questions people ask about Yedibasak.</h2>
         </div>
-        <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-1" id="faq-1-label">What payment methods does Yedibasak accept?</button>
-            <div class="accordion-panel" id="faq-1" aria-labelledby="faq-1-label" hidden>
-              <p>We accept credit card, bank transfer, and in-person donations. Recurring gifts are managed through a secure partner platform.</p>
+
+        <div class="faq-layout">
+          <figure class="faq-media" aria-hidden="true">
+            <img src="assets/img/impact/04.png" alt="Volunteers planning" loading="lazy" decoding="async">
+            <figcaption>Field planning keeps partners aligned and communities supported.</figcaption>
+          </figure>
+
+          <div class="accordion" data-accordion>
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-1"
+                id="faq-1-label">
+                What does Yedibasak focus on?
+                <span class="acc-ic" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-panel" id="faq-1" aria-labelledby="faq-1-label" hidden>
+                <p>Yedibasak supports community resilience through relief coordination, education support, health
+                  initiatives, and development programs designed with local partners.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-2"
+                id="faq-2-label">
+                Where do you operate?
+                <span class="acc-ic" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-panel" id="faq-2" aria-labelledby="faq-2-label" hidden>
+                <p>Programs are delivered across Türkiye with spillover support to neighboring communities, guided by
+                  partner networks and community councils.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-3"
+                id="faq-3-label">
+                How can organizations collaborate with Yedibasak?
+                <span class="acc-ic" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-panel" id="faq-3" aria-labelledby="faq-3-label" hidden>
+                <p>Collaboration typically starts with an introduction and a short scope review (region, capacity,
+                  delivery model). The team then aligns timelines, reporting, and verification steps.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-4"
+                id="faq-4-label">
+                How do you document and report progress?
+                <span class="acc-ic" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-panel" id="faq-4" aria-labelledby="faq-4-label" hidden>
+                <p>Updates are shared using field logs, delivery confirmations, and partner verification. Reporting
+                  focuses on clarity: what was delivered, where, when, and what outcomes were observed.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-5"
+                id="faq-5-label">
+                Can individuals volunteer or support activities?
+                <span class="acc-ic" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-panel" id="faq-5" aria-labelledby="faq-5-label" hidden>
+                <p>Yes. Individuals can participate through partner programs, volunteering opportunities, and community
+                  initiatives depending on region and availability.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-6"
+                id="faq-6-label">
+                How can I contact the team?
+                <span class="acc-ic" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-panel" id="faq-6" aria-labelledby="faq-6-label" hidden>
+                <p>Email <a href="mailto:hello@yedibasak.org">hello@yedibasak.org</a> or reach out via the official
+                  website contact channels.</p>
+              </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-2" id="faq-2-label">Will I receive a receipt for my donation?</button>
-            <div class="accordion-panel" id="faq-2" aria-labelledby="faq-2-label" hidden>
-              <p>Yes, every donation is followed by a digital receipt that includes your gift details and tax information where applicable.</p>
-            </div>
+        </div>
+      </div>
+    </section>
+    <section id="final-cta" class="final-cta reveal" aria-labelledby="cta-title">
+      <div class="container final-cta-inner">
+        <div class="final-cta-copy">
+          <p class="eyebrow">Next step</p>
+          <h2 id="cta-title">Stay connected with Yedibasak.</h2>
+          <p class="muted">
+            Explore official updates, learn how partnerships work, or reach the team for collaboration and inquiries.
+          </p>
+
+          <div class="final-cta-actions">
+            <a class="btn btn-primary btn-lg" href="https://yedibasak.org.tr/en" target="_blank" rel="noopener">
+              Visit official website <span class="btn-icon" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn-outline btn-lg" href="#contact" data-scroll="#contact">Contact the team</a>
           </div>
-          <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-3" id="faq-3-label">How can I volunteer with Yedibasak?</button>
-            <div class="accordion-panel" id="faq-3" aria-labelledby="faq-3-label" hidden>
-              <p>Submit an interest form on our website and we will connect you with near-term field or remote opportunities.</p>
-            </div>
+
+          <div class="final-mini">
+            <span class="pill">Programs</span>
+            <span class="pill">Partners</span>
+            <span class="pill">Field updates</span>
+            <span class="pill">Reporting</span>
           </div>
-          <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-4" id="faq-4-label">How do you choose programs?</button>
-            <div class="accordion-panel" id="faq-4" aria-labelledby="faq-4-label" hidden>
-              <p>Program selection involves community councils, needs assessments, and feasibility studies so every initiative is rooted in local leadership.</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-5" id="faq-5-label">How do you ensure transparency?</button>
-            <div class="accordion-panel" id="faq-5" aria-labelledby="faq-5-label" hidden>
-              <p>Reports include budgets, procurement notes, and verification from partner committees, and we share updates each month.</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-6" id="faq-6-label">How can I contact the team?</button>
-            <div class="accordion-panel" id="faq-6" aria-labelledby="faq-6-label" hidden>
-              <p>Email <a href="mailto:hello@yedibasak.org">hello@yedibasak.org</a> or call +90 212 555 0101 to speak with our field or fundraising teams.</p>
-            </div>
-          </div>
+        </div>
+
+        <div class="final-cta-media" aria-hidden="true">
+          <img src="assets/img/impact/02.jpg" alt="" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
 
-    <section id="final-cta" class="final-cta reveal">
-      <div class="container final-cta-inner">
-        <div>
-          <p class="eyebrow">Final call</p>
-          <h2>Make an impact today.</h2>
-          <p>Choose a campaign, volunteer alongside local teams, or stay updated with our reporting.</p>
-        </div>
-        <div class="final-cta-actions">
-          <a class="btn btn-primary" href="#featured-campaigns" data-scroll="#featured-campaigns">Donate</a>
-          <a class="btn btn-outline" href="#contact" data-scroll="#contact">Get involved</a>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <footer class="site-footer" id="contact">
-    <div class="container footer-grid">
-      <div>
-        <h3>About</h3>
-        <p>Yedibasak — transparent stewardship for communities in Türkiye and beyond.</p>
-      </div>
-      <div>
-        <h3>Programs</h3>
-        <a href="#programs" data-scroll="#programs">Explore work</a>
-        <a href="#featured-campaigns" data-scroll="#featured-campaigns">Featured campaigns</a>
-        <a href="#impact" data-scroll="#impact">Impact reports</a>
-      </div>
-      <div>
-        <h3>Get involved</h3>
-        <a href="#final-cta" data-scroll="#final-cta">Volunteer</a>
-        <a href="#news" data-scroll="#news">News &amp; events</a>
-        <a href="#faq" data-scroll="#faq">FAQ</a>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <a href="mailto:hello@yedibasak.org">hello@yedibasak.org</a>
-        <a href="tel:+902125550101">+90 212 555 0101</a>
-        <div class="social-links">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+  <footer class="site-footer" id="contact" aria-labelledby="footer-title">
+    <div class="footer-glow" aria-hidden="true"></div>
+
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo" aria-label="Yedibasak logo">
+          <!-- Logo is image only (no text) -->
+          <img src="assets/img/logo.svg" alt="Yedibasak" loading="lazy" decoding="async">
+        </div>
+
+        <h3 id="footer-title" class="sr-only">Yedibasak</h3>
+
+        <p class="footer-desc">
+          Yedibasak supports community resilience through partner-led coordination, documented reporting, and locally
+          guided programs
+          across Türkiye and neighboring communities.
+        </p>
+
+        <div class="footer-chips" aria-label="Quick contact">
+          <a class="chip" href="mailto:hello@yedibasak.org">
+            <span class="chip-ic" aria-hidden="true">✉</span>
+            hello@yedibasak.org
+          </a>
+          <a class="chip" href="tel:+902125550101">
+            <span class="chip-ic" aria-hidden="true">☎</span>
+            +90 212 555 0101
+          </a>
         </div>
       </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="#about" data-scroll="#about">About</a>
+          <a href="#programs" data-scroll="#programs">Programs</a>
+          <a href="#reach" data-scroll="#reach">Reach</a>
+          <a href="#news" data-scroll="#news">News &amp; updates</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#faq" data-scroll="#faq">FAQ</a>
+          <a href="#partners" data-scroll="#partners">Partners</a>
+          <a href="#gallery" data-scroll="#gallery">Gallery</a>
+          <a href="https://yedibasak.org.tr/en" target="_blank" rel="noopener">Official website</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="#contact" data-scroll="#contact">Get in touch</a>
+          <a href="mailto:hello@yedibasak.org">Email the team</a>
+          <a href="tel:+902125550101">Call the office</a>
+
+          <div class="footer-social" aria-label="Social links">
+            <a class="social-btn" href="#" aria-label="Facebook">
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a class="social-btn" href="#" aria-label="Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a class="social-btn" href="#" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
     </div>
-    <div class="footer-bottom">
-      <p>Yedibasak — All rights reserved.</p>
+
+    <div class="container footer-bottom">
+      <p class="footer-copy">© <span id="footer-year">2026</span> Yedibasak. All rights reserved.</p>
       <div class="footer-legal">
         <a href="#">Privacy</a>
         <a href="#">Terms</a>
@@ -453,7 +1705,12 @@
     </div>
   </footer>
 
-  <button id="back-to-top" class="back-to-top" aria-label="Back to top">Top</button>
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">
+    <span class="btt-ic" aria-hidden="true">↑</span>
+  </button>
+
+  <script src="assets/js/swiper-bundle.min.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
+
 </html>
