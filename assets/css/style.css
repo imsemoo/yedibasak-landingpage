@@ -2477,7 +2477,7 @@ textarea {
 
 .news-card__media {
   position: relative;
-  height: 200px;
+  height: 280px;
   margin: 0;
 }
 
@@ -3312,7 +3312,7 @@ textarea {
 
 .footer-contact-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: .75rem;
   padding: .7rem .9rem;
   border-radius: var(--radius-lg);
